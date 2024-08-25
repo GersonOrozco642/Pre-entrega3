@@ -27,10 +27,10 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background-color: black;
 }
 
 .header::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -81,6 +81,13 @@ body {
   color: white;
   cursor: pointer;
   display: none;
+}
+
+.inicio {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*mediaqueries*/
