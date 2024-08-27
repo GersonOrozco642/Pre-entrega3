@@ -6,13 +6,5 @@
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(195deg, #000, #00000094), url('/images/modern.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
-}
-
-.background {
-    filter: blur(5px);
+    background-color: $color-white;
 }
