@@ -1,0 +1,83 @@
+.gallery-body {
+    background: linear-gradient(180deg, #000000fd, #000000cc), url(/images/modern.jpeg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    margin-top: 100px;
+    gap: $gap;
+    padding: $gap;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.137);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: transform $transition-time ease, box-shadow $transition-time ease;
+    cursor: pointer;
+
+    display: flex; /* Añadido para centrar el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity $transition-time ease, filter $transition-time ease;
+    }
+
+    &:hover img {
+        opacity: 0.7;
+        filter: brightness(80%);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $overlay-bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity $transition-time ease, background $transition-time ease;
+
+        .text {
+            color: $text-color;
+            font-size: 1.4rem;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+    }
+}
+
