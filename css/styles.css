@@ -7,7 +7,11 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9921568627), rgba(0, 0, 0, 0.8)), url(/images/modern.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
@@ -79,7 +83,7 @@ body {
 .footer {
   position: relative;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -148,59 +152,58 @@ body {
   font-size: 20px;
 }
 
-main .pro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.main-about {
+  padding: 2rem;
+  color: #bac0c5;
 }
-main .pro h2 {
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
+.main-about .about .container {
+  max-width: 1200px;
+  margin-top: 8rem;
+  padding: 2rem;
+}
+.main-about .about .container h1 {
+  font-size: 4.5rem;
   margin-bottom: 1rem;
 }
-main .pro p {
+.main-about .about .container p {
   font-size: 1.125rem;
-  color: #333;
-  margin-bottom: 1.5rem;
   line-height: 1.6;
-  max-width: 800px;
+  margin-bottom: 1rem;
 }
-main .pro .pro-jpg {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+.main-about .about .container p strong {
+  font-weight: bold;
 }
-main .pro .pro-jpg:hover {
-  transform: scale(1.05);
+.main-about .about .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-
-.contact-body {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9921568627), rgba(0, 0, 0, 0.8)), url(/images/modern.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+.main-about .about .container .row .col-md-6 {
+  flex: 1;
+  min-width: 0;
+}
+.main-about .about .container .row .col-md-6 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.main-about .about .container .row .col-md-6 p {
+  font-size: 1rem;
+}
+.main-about .about .container .team {
+  margin-top: 2rem;
+}
+.main-about .about .container .team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.main-about .about .container .team p {
+  font-size: 1rem;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin-top: 100px;
-}
-
-.header {
-  background: #000000;
-  color: rgba(255, 255, 255, 0.0745098039);
-  text-align: center;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2.5rem;
 }
 
 .main-content {
@@ -294,14 +297,6 @@ main .pro .pro-jpg:hover {
   transform: scale(1.05);
 }
 
-.gallery-body {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9921568627), rgba(0, 0, 0, 0.8)), url(/images/modern.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -378,11 +373,6 @@ main .pro .pro-jpg:hover {
   gap: 0;
   min-height: 100vh;
   max-height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9921568627), rgba(0, 0, 0, 0.8)), url(/images/modern.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 h1 {
@@ -399,8 +389,8 @@ h1:hover {
 
 .carousel {
   position: relative;
-  width: 100vw; /* Ajusta el ancho del carrusel */
-  max-width: 1200px; /* Establece un máximo ancho */
+  width: 100vw;
+  max-width: 1200px;
   margin: 20px auto;
   overflow: hidden;
   border-radius: 8px;
@@ -429,8 +419,8 @@ h1:hover {
 
 .carousel-slide img {
   width: 100%;
-  height: 100%; /* Asegura que la imagen rellene completamente el slide */
-  object-fit: cover; /* Mantiene la proporción de la imagen y recorta el exceso si es necesario */
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 

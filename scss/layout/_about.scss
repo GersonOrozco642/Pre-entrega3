@@ -1,34 +1,59 @@
-main {
-    .pro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+.main-about {
+    padding: 2rem;
+    color: #bac0c5;
   
-      h2 {
-        font-size: 2rem;
-        color: $color-black;
-        margin-bottom: 1rem;
-      }
+    .about {
+      .container {
+        max-width: 1200px;
+        margin-top: 8rem;
+        padding: 2rem;
   
-      p {
-        font-size: 1.125rem;
-        color: #333;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-        max-width: 800px;
-      }
+        h1 {
+          font-size: 4.5rem;
+          margin-bottom: 1rem;
+        }
   
-      .pro-jpg {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
+        p {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
   
-        &:hover {
-          transform: scale(1.05);
+          strong {
+            font-weight: bold;
+          }
+        }
+  
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+  
+          .col-md-6 {
+            flex: 1;
+            min-width: 0; // 
+  
+            h2 {
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            }
+  
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+  
+        .team {
+          margin-top: 2rem;
+  
+          h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+  
+          p {
+            font-size: 1rem;
+          }
         }
       }
     }

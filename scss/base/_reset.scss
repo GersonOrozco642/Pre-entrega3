@@ -6,5 +6,9 @@
 }
 
 body {
-    background-color: $color-white;
+    background: linear-gradient(180deg, #000000fd, #000000cc), url(/images/modern.jpeg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
 }
